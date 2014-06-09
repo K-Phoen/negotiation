@@ -1,4 +1,4 @@
-negotiation
+negotiation [![Build Status](https://travis-ci.org/K-Phoen/negotiation.svg?branch=master)](https://travis-ci.org/K-Phoen/negotiation)
 ===========
 
 **negotiation** is a standalone library that allows you to implement [content negotiation](http://www.w3.org/Protocols/rfc2616/rfc2616-sec12.html)
@@ -55,6 +55,12 @@ func main() {
 ```bash
 $ go test
 ```
+
+## Credits
+
+  * Author: [Kévin Gomez](https://github.com/K-Phoen/)
+  * [William Durand](https://github.com/willdurand/) and it's [Negotiation PHP library](https://github.com/willdurand/Negotiation/),
+    from whom I borrowed this library's name and a few ideas.
 
 ## License
 
