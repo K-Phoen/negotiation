@@ -40,13 +40,14 @@ import (
 )
 
 func main() {
-  format, err := negotiation.NegotiateAccept("application/rdf+xml;q=0.5,text/html;q=.3", []string{"text/html"})
+  negotiation.RegisterFormat("html", []string{"text/html", "application/xhtml+xml"})
+  format, err := negotiation.NegotiateAccept("application/rdf+xml;q=0.5,text/html;q=.3", []string{"html", "application/xml"})
 
   if err != nil {
     fmt.Println("Unable to negotiate the format")
   }
 
-  fmt.Println("Negotiated format: ", format.Value) // outputs: "Negotiated format: text/html"
+  fmt.Println("Negotiated format: " + format.Name + " (" + format.Value + ")") // outputs: "Negotiated format: html (text/html)"
 }
 ```
 
