@@ -34,6 +34,13 @@ var negotiateAcceptTestData = []alternativeTestData{
 }
 
 func TestNegotiateAccept(t *testing.T) {
+
+	RegisterFormat("html", []string{"text/html", "application/xhtml+xml"})
+	RegisterFormat("xml", []string{"text/xml", "application/xml", "application/x-xml"})
+	RegisterFormat("txt", []string{"text/plain"})
+	RegisterFormat("rdf", []string{"application/rdf+xml"})
+	RegisterFormat("rss", []string{"application/rss", "application/rss+xml"})
+
 	for _, pair := range negotiateAcceptTestData {
 		var resultType, resultName string
 		alternative, _ := NegotiateAccept(pair.header, pair.alternatives)
