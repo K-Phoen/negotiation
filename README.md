@@ -6,6 +6,12 @@ in your application, whatever framework you use.
 This provides specific functions to negotiate `Accept` and `Accept-Language`
 headers, although any kind of header can be parsed.
 
+## Status
+
+This project is **DEPRECATED** and should NOT be used. 
+
+If someone magically appears and wants to maintain this project, I'll gladly give access to this repository.
+
 ## Usage
 
 ### Language negotiation
